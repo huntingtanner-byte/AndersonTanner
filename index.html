@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anderson & Tanner Construction | Kitchen & Basement Remodels | Utah</title>
-<meta name="description" content="Expert kitchen and basement remodeling in Utah County and Salt Lake City. Licensed general contractor. Free estimates within 24 hours.">
+<title>Anderson & Tanner Construction | Kitchen, Bathroom & Basement Remodels | Utah</title>
+<meta name="description" content="Expert kitchen, bathroom, and basement remodeling in Utah County and Salt Lake City. Licensed general contractor. Free estimates within 24 hours.">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -357,7 +357,7 @@ section {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 56px;
 }
@@ -727,6 +727,34 @@ section {
   .gallery-item.tall { grid-row: span 1; }
 }
 
+/* ===== COMING SOON ===== */
+.coming-soon-box {
+  margin-top: 48px;
+  border: 2px dashed rgba(26,92,110,0.18);
+  border-radius: 16px;
+  padding: 72px 40px;
+  text-align: center;
+  background: var(--ghost);
+}
+.coming-soon-box .cs-icon {
+  width: 56px; height: 56px;
+  background: var(--ice);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+}
+.coming-soon-box .cs-icon svg {
+  width: 28px; height: 28px;
+  stroke: var(--dark-teal); fill: none;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+.coming-soon-box h3 {
+  font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 8px;
+}
+.coming-soon-box p {
+  color: var(--text-light); font-size: 15px;
+}
+
 /* ===== PRICING TABLE ===== */
 .pricing {
   background: var(--ghost);
@@ -1010,7 +1038,7 @@ footer {
   .hamburger { display: flex; }
   section { padding: 72px 24px; }
   .hero { padding: 100px 24px 60px; }
-  .services-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
   .features-grid { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: repeat(2, 1fr); }
   .process-step::after { display: none; }
@@ -1023,6 +1051,7 @@ footer {
 
 @media (max-width: 580px) {
   .hero-stats { gap: 24px; }
+  .services-grid { grid-template-columns: 1fr; }
   .hero-stat h3 { font-size: 28px; }
   .process-steps { grid-template-columns: 1fr; }
 }
@@ -1091,8 +1120,8 @@ footer {
 <section class="services" id="services">
   <div class="container reveal">
     <div class="section-label">What We Do</div>
-    <div class="section-title">Two things. <span class="accent">Done right.</span></div>
-    <p class="section-sub">We specialize in kitchen and basement remodels so we can deliver exceptional results every time.</p>
+    <div class="section-title">Three things. <span class="accent">Done right.</span></div>
+    <p class="section-sub">We specialize in kitchen, bathroom, and basement remodels so we can deliver exceptional results every time.</p>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon">
@@ -1100,7 +1129,13 @@ footer {
         </div>
         <h3>Kitchen Remodels</h3>
         <p>Full gut renovations from demo to final walkthrough. Cabinetry, countertops, tile, flooring, electrical, plumbing, paint, and fixtures. We handle every detail so you get the kitchen you actually want to cook in.</p>
-        <span class="price-range">$25,000 - $75,000</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 6H5a2 2 0 00-2 2v3a2 2 0 002 2h4m6-7h4a2 2 0 012 2v3a2 2 0 01-2 2h-4m-6 4v1a3 3 0 006 0v-1M3 13h18"/></svg>
+        </div>
+        <h3>Bathroom Remodels</h3>
+        <p>Complete bathroom transformations from layout to last tile. Vanities, tile showers, soaking tubs, plumbing, lighting, and custom finishes. We build bathrooms that feel like a retreat, not an afterthought.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
@@ -1185,46 +1220,6 @@ footer {
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery" id="gallery">
-  <div class="container reveal">
-    <div class="section-label">Our Work</div>
-    <div class="section-title">Kitchens we're <span class="accent">proud of.</span></div>
-    <div class="gallery-grid">
-      <div class="gallery-item wide" onclick="openLightbox(this)">
-        <img src="agj2rogA.webp" alt="Elegant white kitchen with wood island and coffered ceiling">
-      </div>
-      <div class="gallery-item tall" onclick="openLightbox(this)">
-        <img src="studiomcgee-WatersEdge-20230823-0918_web-scaled-1.jpg" alt="Rustic stone kitchen with wood cabinets and twin pendants">
-      </div>
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="64c5094fd39bb30d677ae0e3d0c05817.webp" alt="Farmhouse kitchen with stone wall and warm wood island">
-      </div>
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="BECKI-OWENS-Lucca-Design-White-and-Wood-Kitchen.webp" alt="White kitchen with exposed wood ceiling beams">
-      </div>
-      <div class="gallery-item wide" onclick="openLightbox(this)">
-        <img src="nHa4h6dkSn9HgGjFuRCJ9P-1200-80.jpg" alt="Modern farmhouse kitchen with green cabinets and open shelving">
-      </div>
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="studiomcgee_Lozano_003-1-scaled.jpg" alt="Bright white kitchen with gold pendants and clean island">
-      </div>
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="download.jpg" alt="White kitchen with wood island and pendant lights">
-      </div>
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="download (1).jpg" alt="White kitchen with dark island">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-  <img id="lightbox-img" src="" alt="">
-</div>
-
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="container reveal">
@@ -1307,7 +1302,7 @@ footer {
   <div class="container reveal">
     <div class="section-label">Where We Work</div>
     <div class="section-title">Serving the <span class="accent">Wasatch Front.</span></div>
-    <p class="section-sub">Kitchen and basement remodeling across Utah County and Salt Lake City.</p>
+    <p class="section-sub">Kitchen, bathroom, and basement remodeling across Utah County and Salt Lake City.</p>
     <div class="areas-list">
       <span class="area-tag">Alpine</span>
       <span class="area-tag">Alta</span>
@@ -1359,6 +1354,95 @@ footer {
     </div>
   </div>
 </section>
+
+<!-- KITCHEN GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container reveal">
+    <div class="section-label">Our Work</div>
+    <div class="section-title">Kitchens we're <span class="accent">proud of.</span></div>
+    <div class="gallery-grid">
+      <div class="gallery-item wide" onclick="openLightbox(this)">
+        <img src="agj2rogA.webp" alt="Elegant white kitchen with wood island and coffered ceiling">
+      </div>
+      <div class="gallery-item tall" onclick="openLightbox(this)">
+        <img src="studiomcgee-WatersEdge-20230823-0918_web-scaled-1.jpg" alt="Rustic stone kitchen with wood cabinets and twin pendants">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="64c5094fd39bb30d677ae0e3d0c05817.webp" alt="Farmhouse kitchen with stone wall and warm wood island">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="BECKI-OWENS-Lucca-Design-White-and-Wood-Kitchen.webp" alt="White kitchen with exposed wood ceiling beams">
+      </div>
+      <div class="gallery-item wide" onclick="openLightbox(this)">
+        <img src="nHa4h6dkSn9HgGjFuRCJ9P-1200-80.jpg" alt="Modern farmhouse kitchen with green cabinets and open shelving">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="studiomcgee_Lozano_003-1-scaled.jpg" alt="Bright white kitchen with gold pendants and clean island">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="download.jpg" alt="White kitchen with wood island and pendant lights">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="download (1).jpg" alt="White kitchen with dark island">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BATHROOM GALLERY -->
+<section class="gallery" id="bath-gallery" style="background: var(--ghost);">
+  <div class="container reveal">
+    <div class="section-label">Our Work</div>
+    <div class="section-title">Bathrooms we're <span class="accent">proud of.</span></div>
+    <div class="gallery-grid">
+      <div class="gallery-item wide" onclick="openLightbox(this)">
+        <img src="BECKI-OWENS-Family-Ties-Project-Master-Bathroom-Fireclay-Tile.webp" alt="Master bathroom with fireclay tile and custom vanity">
+      </div>
+      <div class="gallery-item tall" onclick="openLightbox(this)">
+        <img src="estillo-project-bath-natural-stained-cabinetry-2.webp" alt="Bathroom with natural stained cabinetry and stone tile">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="BECKI-OWENS-White-Bathroom.webp" alt="Bright white bathroom with clean modern finishes">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="villa-bonita-master-bath-brizo-widespread-rook-faucet.webp" alt="Master bath with Brizo widespread faucet and marble tile">
+      </div>
+      <div class="gallery-item wide" onclick="openLightbox(this)">
+        <img src="studiomcgee_AZHomestead_102-scaled.jpg" alt="Warm-toned bathroom with wood accents and soaking tub">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="SGParade2021064_1280x.webp" alt="Elegant bathroom with custom tile shower">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="IMG_9797.webp" alt="Bathroom remodel with custom finishes">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="AeLn1EvY.webp" alt="Modern bathroom with clean lines and quality fixtures">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BASEMENT GALLERY COMING SOON -->
+<section class="gallery" id="basement-gallery">
+  <div class="container reveal">
+    <div class="section-label">Our Work</div>
+    <div class="section-title">Basements we're <span class="accent">finishing.</span></div>
+    <div class="coming-soon-box">
+      <div class="cs-icon">
+        <svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+      </div>
+      <h3>Photos Coming Soon</h3>
+      <p>We're finishing up some incredible basement projects right now. Check back soon to see the results.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
 
 <!-- ESTIMATE FORM -->
 <section class="estimate" id="estimate">
@@ -1502,8 +1586,8 @@ footer {
     <div class="footer-links">
       <h5>Services</h5>
       <a href="#services">Kitchen Remodels</a>
+      <a href="#services">Bathroom Remodels</a>
       <a href="#services">Basement Finishing</a>
-      <a href="#services">Basement Remodels</a>
     </div>
     <div class="footer-links">
       <h5>Contact</h5>
