@@ -646,6 +646,87 @@ section {
   color: var(--dark-teal);
 }
 
+/* ===== GALLERY ===== */
+.gallery {
+  background: var(--dark);
+  padding: 100px 0;
+}
+
+.gallery .section-label { color: var(--light-blue); }
+
+.gallery .section-title { color: var(--white); }
+
+.gallery-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 280px;
+  gap: 12px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery-item.wide { grid-column: span 2; }
+.gallery-item.tall { grid-row: span 2; }
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.open { display: flex; }
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  line-height: 1;
+  background: none;
+  border: none;
+}
+
+@media(max-width:768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+  }
+  .gallery-item.wide { grid-column: span 2; }
+  .gallery-item.tall { grid-row: span 1; }
+}
+
 /* ===== PRICING TABLE ===== */
 .pricing {
   background: var(--ghost);
@@ -1104,6 +1185,46 @@ footer {
   </div>
 </section>
 
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container reveal">
+    <div class="section-label">Our Work</div>
+    <div class="section-title">Kitchens we're <span class="accent">proud of.</span></div>
+    <div class="gallery-grid">
+      <div class="gallery-item wide" onclick="openLightbox(this)">
+        <img src="agj2rogA.webp" alt="Elegant white kitchen with wood island and coffered ceiling">
+      </div>
+      <div class="gallery-item tall" onclick="openLightbox(this)">
+        <img src="studiomcgee-WatersEdge-20230823-0918_web-scaled-1.jpg" alt="Rustic stone kitchen with wood cabinets and twin pendants">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="64c5094fd39bb30d677ae0e3d0c05817.webp" alt="Farmhouse kitchen with stone wall and warm wood island">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="BECKI-OWENS-Lucca-Design-White-and-Wood-Kitchen.webp" alt="White kitchen with exposed wood ceiling beams">
+      </div>
+      <div class="gallery-item wide" onclick="openLightbox(this)">
+        <img src="nHa4h6dkSn9HgGjFuRCJ9P-1200-80.jpg" alt="Modern farmhouse kitchen with green cabinets and open shelving">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="studiomcgee_Lozano_003-1-scaled.jpg" alt="Bright white kitchen with gold pendants and clean island">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="download.jpg" alt="White kitchen with wood island and pendant lights">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="download (1).jpg" alt="White kitchen with dark island">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="container reveal">
@@ -1408,6 +1529,20 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Lightbox
+function openLightbox(el) {
+  const img = el.querySelector('img');
+  document.getElementById('lightbox-img').src = img.src;
+  document.getElementById('lightbox-img').alt = img.alt;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
 // Form submit
 function handleSubmit(e) {
