@@ -646,6 +646,91 @@ section {
   color: var(--dark-teal);
 }
 
+/* ===== PRICING TABLE ===== */
+.pricing {
+  background: var(--ghost);
+}
+
+.pricing-table-wrap {
+  overflow-x: auto;
+  margin-top: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 48px rgba(26,92,110,0.08);
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  min-width: 600px;
+}
+
+.pricing-table thead {
+  background: var(--dark-teal);
+  color: var(--white);
+}
+
+.pricing-table thead th {
+  padding: 18px 24px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.pricing-table thead th:not(:first-child) {
+  text-align: center;
+}
+
+.pricing-table tbody tr {
+  border-bottom: 1px solid var(--ice);
+  transition: background 0.2s;
+}
+
+.pricing-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.pricing-table tbody tr:hover {
+  background: var(--ghost);
+}
+
+.pricing-table td {
+  padding: 20px 24px;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.pricing-table td:not(:first-child) {
+  text-align: center;
+  color: var(--text-light);
+}
+
+.pricing-table .tier-name {
+  font-weight: 700;
+  color: var(--dark);
+  font-size: 16px;
+}
+
+.pricing-table .tier-basic .tier-name { color: var(--text); }
+.pricing-table .tier-mid .tier-name { color: var(--teal); }
+.pricing-table .tier-high .tier-name { color: var(--dark-teal); }
+
+.pricing-table .cost-sqft {
+  font-weight: 700;
+  color: var(--dark-teal);
+}
+
+.pricing-note {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--text-light);
+  text-align: center;
+}
+
 /* ===== ESTIMATE FORM ===== */
 .estimate {
   background: var(--white);
@@ -1016,6 +1101,52 @@ footer {
         <p>We walk through every detail together. We don't consider it done until you're completely satisfied.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container reveal">
+    <div class="section-label">Investment Guide</div>
+    <div class="section-title">What does a basement finish <span class="accent">actually cost?</span></div>
+    <p class="section-sub" style="max-width:640px;">Prices vary based on finish level, materials, and scope. Here's a realistic breakdown to help you plan your budget.</p>
+    <div class="pricing-table-wrap">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Finish Level</th>
+            <th>Cost Per Sq Ft</th>
+            <th>800 Sq Ft</th>
+            <th>1,000 Sq Ft</th>
+            <th>1,200 Sq Ft</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tier-basic">
+            <td><span class="tier-name">Basic</span></td>
+            <td class="cost-sqft">$25–$45</td>
+            <td>$20,000–$36,000</td>
+            <td>$25,000–$45,000</td>
+            <td>$30,000–$54,000</td>
+          </tr>
+          <tr class="tier-mid">
+            <td><span class="tier-name">Mid-Range</span></td>
+            <td class="cost-sqft">$45–$65</td>
+            <td>$36,000–$52,000</td>
+            <td>$45,000–$65,000</td>
+            <td>$54,000–$78,000</td>
+          </tr>
+          <tr class="tier-high">
+            <td><span class="tier-name">High-End</span></td>
+            <td class="cost-sqft">$65–$100+</td>
+            <td>$52,000–$80,000+</td>
+            <td>$65,000–$100,000+</td>
+            <td>$78,000–$120,000+</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="pricing-note">Estimates vary based on project complexity, materials, and site conditions. Request a free on-site estimate for an accurate quote.</p>
   </div>
 </section>
 
